@@ -1,0 +1,23 @@
+# Entorno y secretos
+.env
+.env.local
+.env*.local
+
+# Vercel
+.vercel
+
+# Dependencias
+node_modules/
+
+# Informe y capturas (no subir al repo)
+informe_optistock/
+
+# Archivos temporales de desarrollo
+scratch*.js
+temp_*.json
+temp_*.txt
+*.txt
+tool_res.json
+inventory_items_rows.json
+maintenance_rows.json
+png_files.txt

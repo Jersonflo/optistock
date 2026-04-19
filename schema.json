@@ -1,0 +1,2488 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "title": "standard public schema",
+    "version": "14.1"
+  },
+  "host": "vpusmprxvxmipgijitki.supabase.co:443",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "application/vnd.pgrst.object+json;nulls=stripped",
+    "application/vnd.pgrst.object+json",
+    "text/csv"
+  ],
+  "produces": [
+    "application/json",
+    "application/vnd.pgrst.object+json;nulls=stripped",
+    "application/vnd.pgrst.object+json",
+    "text/csv"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "produces": [
+          "application/openapi+json",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "summary": "OpenAPI description (this document)",
+        "tags": [
+          "Introspection"
+        ]
+      }
+    },
+    "/access_logs_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.metadata"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/access_logs_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "access_logs_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.access_logs_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "access_logs_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.metadata"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "access_logs_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.metadata"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.access_logs_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.access_logs_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "access_logs_rows"
+        ]
+      }
+    },
+    "/inventory_items_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.category_id"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/inventory_items_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "inventory_items_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.inventory_items_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "inventory_items_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.category_id"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "inventory_items_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_items_rows.category_id"
+          },
+          {
+            "$ref": "#/parameters/body.inventory_items_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "inventory_items_rows"
+        ]
+      }
+    },
+    "/cabinet_sessions_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.opened_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.closed_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.notes"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/cabinet_sessions_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "cabinet_sessions_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.cabinet_sessions_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "cabinet_sessions_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.opened_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.closed_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.notes"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "cabinet_sessions_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.cabinet_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.user_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.opened_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.closed_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.notes"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinet_sessions_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.cabinet_sessions_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "cabinet_sessions_rows"
+        ]
+      }
+    },
+    "/profiles_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.full_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.role"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/profiles_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "profiles_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.profiles_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "profiles_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.full_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.role"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "profiles_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.full_name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.role"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.profiles_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/body.profiles_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "profiles_rows"
+        ]
+      }
+    },
+    "/maintenance_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.interval_days"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/maintenance_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "maintenance_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.maintenance_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "maintenance_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.interval_days"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "maintenance_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_rows.interval_days"
+          },
+          {
+            "$ref": "#/parameters/body.maintenance_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "maintenance_rows"
+        ]
+      }
+    },
+    "/maintenance_history_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.maintenance_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.fecha"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/maintenance_history_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "maintenance_history_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.maintenance_history_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "maintenance_history_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.maintenance_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.fecha"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "maintenance_history_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.maintenance_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.fecha"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.maintenance_history_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.maintenance_history_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "maintenance_history_rows"
+        ]
+      }
+    },
+    "/session_items_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.session_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/session_items_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "session_items_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.session_items_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "session_items_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.session_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "session_items_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.session_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.item_id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.action"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.quantity"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.session_items_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/body.session_items_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "session_items_rows"
+        ]
+      }
+    },
+    "/cabinets_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.location"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.description"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.is_open"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/cabinets_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "cabinets_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.cabinets_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "cabinets_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.location"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.description"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.is_open"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "cabinets_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.location"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.description"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.status"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.cabinets_rows.is_open"
+          },
+          {
+            "$ref": "#/parameters/body.cabinets_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "cabinets_rows"
+        ]
+      }
+    },
+    "/inventory_categories_rows": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/inventory_categories_rows"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "inventory_categories_rows"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.inventory_categories_rows"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "inventory_categories_rows"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "inventory_categories_rows"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.name"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.created_at"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.inventory_categories_rows.updated_at"
+          },
+          {
+            "$ref": "#/parameters/body.inventory_categories_rows"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "inventory_categories_rows"
+        ]
+      }
+    },
+    "/Inventario": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Equipo"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Unidades"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Categoría"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Ubicación"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/order"
+          },
+          {
+            "$ref": "#/parameters/range"
+          },
+          {
+            "$ref": "#/parameters/rangeUnit"
+          },
+          {
+            "$ref": "#/parameters/offset"
+          },
+          {
+            "$ref": "#/parameters/limit"
+          },
+          {
+            "$ref": "#/parameters/preferCount"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Inventario"
+              },
+              "type": "array"
+            }
+          },
+          "206": {
+            "description": "Partial Content"
+          }
+        },
+        "tags": [
+          "Inventario"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/body.Inventario"
+          },
+          {
+            "$ref": "#/parameters/select"
+          },
+          {
+            "$ref": "#/parameters/preferPost"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "tags": [
+          "Inventario"
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Equipo"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Unidades"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Categoría"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Ubicación"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "Inventario"
+        ]
+      },
+      "patch": {
+        "parameters": [
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.id"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Equipo"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Unidades"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Categoría"
+          },
+          {
+            "$ref": "#/parameters/rowFilter.Inventario.Ubicación"
+          },
+          {
+            "$ref": "#/parameters/body.Inventario"
+          },
+          {
+            "$ref": "#/parameters/preferReturn"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "Inventario"
+        ]
+      }
+    },
+    "/rpc/rpc_search_item_details": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "properties": {
+                "search_term": {
+                  "format": "text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "search_term"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) rpc_search_item_details"
+        ]
+      }
+    },
+    "/rpc/rpc_get_current_borrower": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "properties": {
+                "search_term": {
+                  "format": "text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "search_term"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) rpc_get_current_borrower"
+        ]
+      }
+    },
+    "/rpc/rpc_get_top_items": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "args",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "$ref": "#/parameters/preferParams"
+          }
+        ],
+        "produces": [
+          "application/json",
+          "application/vnd.pgrst.object+json;nulls=stripped",
+          "application/vnd.pgrst.object+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "(rpc) rpc_get_top_items"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "access_logs_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "cabinet_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "user_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "action": {
+          "format": "text",
+          "type": "string"
+        },
+        "metadata": {
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "inventory_items_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "cabinet_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "name": {
+          "format": "text",
+          "type": "string"
+        },
+        "quantity": {
+          "format": "bigint",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "category_id": {
+          "format": "text",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "cabinet_sessions_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "cabinet_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "user_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "opened_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "closed_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "notes": {
+          "format": "bigint",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "profiles_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "full_name": {
+          "format": "text",
+          "type": "string"
+        },
+        "role": {
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "maintenance_rows": {
+      "required": [
+        "id",
+        "item_id",
+        "interval_days"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "item_id": {
+          "default": "",
+          "description": "Note:\nThis is a Foreign Key to `inventory_items_rows.id`.<fk table='inventory_items_rows' column='id'/>",
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "interval_days": {
+          "format": "bigint",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "maintenance_history_rows": {
+      "required": [
+        "id",
+        "maintenance_id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "maintenance_id": {
+          "description": "Note:\nThis is a Foreign Key to `maintenance_rows.id`.<fk table='maintenance_rows' column='id'/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "fecha": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "created_at": {
+          "default": "now()",
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "session_items_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "item_id": {
+          "format": "text",
+          "type": "string"
+        },
+        "action": {
+          "format": "text",
+          "type": "string"
+        },
+        "quantity": {
+          "format": "bigint",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "cabinets_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "name": {
+          "format": "text",
+          "type": "string"
+        },
+        "location": {
+          "format": "text",
+          "type": "string"
+        },
+        "description": {
+          "format": "text",
+          "type": "string"
+        },
+        "status": {
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "is_open": {
+          "format": "boolean",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "inventory_categories_rows": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "text",
+          "type": "string"
+        },
+        "name": {
+          "format": "text",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "timestamp with time zone",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Inventario": {
+      "required": [
+        "id",
+        "Equipo",
+        "Categoría",
+        "Ubicación"
+      ],
+      "properties": {
+        "id": {
+          "description": "Note:\nThis is a Primary Key.<pk/>",
+          "format": "bigint",
+          "type": "integer"
+        },
+        "Equipo": {
+          "format": "text",
+          "type": "string"
+        },
+        "Unidades": {
+          "format": "bigint",
+          "type": "integer"
+        },
+        "Categoría": {
+          "format": "text",
+          "type": "string"
+        },
+        "Ubicación": {
+          "format": "text",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "parameters": {
+    "preferParams": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "in": "header",
+      "type": "string"
+    },
+    "preferReturn": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "return=representation",
+        "return=minimal",
+        "return=none"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "preferCount": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "count=none"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "preferPost": {
+      "name": "Prefer",
+      "description": "Preference",
+      "required": false,
+      "enum": [
+        "return=representation",
+        "return=minimal",
+        "return=none",
+        "resolution=ignore-duplicates",
+        "resolution=merge-duplicates"
+      ],
+      "in": "header",
+      "type": "string"
+    },
+    "select": {
+      "name": "select",
+      "description": "Filtering Columns",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "on_conflict": {
+      "name": "on_conflict",
+      "description": "On Conflict",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "order": {
+      "name": "order",
+      "description": "Ordering",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "range": {
+      "name": "Range",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "header",
+      "type": "string"
+    },
+    "rangeUnit": {
+      "name": "Range-Unit",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "default": "items",
+      "in": "header",
+      "type": "string"
+    },
+    "offset": {
+      "name": "offset",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "limit": {
+      "name": "limit",
+      "description": "Limiting and Pagination",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.access_logs_rows": {
+      "name": "access_logs_rows",
+      "description": "access_logs_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/access_logs_rows"
+      }
+    },
+    "rowFilter.access_logs_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.access_logs_rows.cabinet_id": {
+      "name": "cabinet_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.access_logs_rows.user_id": {
+      "name": "user_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.access_logs_rows.action": {
+      "name": "action",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.access_logs_rows.metadata": {
+      "name": "metadata",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.access_logs_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.inventory_items_rows": {
+      "name": "inventory_items_rows",
+      "description": "inventory_items_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/inventory_items_rows"
+      }
+    },
+    "rowFilter.inventory_items_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.cabinet_id": {
+      "name": "cabinet_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.name": {
+      "name": "name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.quantity": {
+      "name": "quantity",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.updated_at": {
+      "name": "updated_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_items_rows.category_id": {
+      "name": "category_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.cabinet_sessions_rows": {
+      "name": "cabinet_sessions_rows",
+      "description": "cabinet_sessions_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/cabinet_sessions_rows"
+      }
+    },
+    "rowFilter.cabinet_sessions_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.cabinet_id": {
+      "name": "cabinet_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.user_id": {
+      "name": "user_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.opened_at": {
+      "name": "opened_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.closed_at": {
+      "name": "closed_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.notes": {
+      "name": "notes",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinet_sessions_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.profiles_rows": {
+      "name": "profiles_rows",
+      "description": "profiles_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/profiles_rows"
+      }
+    },
+    "rowFilter.profiles_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.profiles_rows.full_name": {
+      "name": "full_name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.profiles_rows.role": {
+      "name": "role",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.profiles_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.profiles_rows.updated_at": {
+      "name": "updated_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.maintenance_rows": {
+      "name": "maintenance_rows",
+      "description": "maintenance_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/maintenance_rows"
+      }
+    },
+    "rowFilter.maintenance_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_rows.item_id": {
+      "name": "item_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_rows.interval_days": {
+      "name": "interval_days",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.maintenance_history_rows": {
+      "name": "maintenance_history_rows",
+      "description": "maintenance_history_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/maintenance_history_rows"
+      }
+    },
+    "rowFilter.maintenance_history_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_history_rows.maintenance_id": {
+      "name": "maintenance_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_history_rows.fecha": {
+      "name": "fecha",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.maintenance_history_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.session_items_rows": {
+      "name": "session_items_rows",
+      "description": "session_items_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/session_items_rows"
+      }
+    },
+    "rowFilter.session_items_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.session_items_rows.session_id": {
+      "name": "session_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.session_items_rows.item_id": {
+      "name": "item_id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.session_items_rows.action": {
+      "name": "action",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.session_items_rows.quantity": {
+      "name": "quantity",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.session_items_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.cabinets_rows": {
+      "name": "cabinets_rows",
+      "description": "cabinets_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/cabinets_rows"
+      }
+    },
+    "rowFilter.cabinets_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.name": {
+      "name": "name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.location": {
+      "name": "location",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.description": {
+      "name": "description",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.status": {
+      "name": "status",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.updated_at": {
+      "name": "updated_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.cabinets_rows.is_open": {
+      "name": "is_open",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.inventory_categories_rows": {
+      "name": "inventory_categories_rows",
+      "description": "inventory_categories_rows",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/inventory_categories_rows"
+      }
+    },
+    "rowFilter.inventory_categories_rows.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_categories_rows.name": {
+      "name": "name",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_categories_rows.created_at": {
+      "name": "created_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.inventory_categories_rows.updated_at": {
+      "name": "updated_at",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "body.Inventario": {
+      "name": "Inventario",
+      "description": "Inventario",
+      "required": false,
+      "in": "body",
+      "schema": {
+        "$ref": "#/definitions/Inventario"
+      }
+    },
+    "rowFilter.Inventario.id": {
+      "name": "id",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.Inventario.Equipo": {
+      "name": "Equipo",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.Inventario.Unidades": {
+      "name": "Unidades",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.Inventario.Categoría": {
+      "name": "Categoría",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    },
+    "rowFilter.Inventario.Ubicación": {
+      "name": "Ubicación",
+      "required": false,
+      "in": "query",
+      "type": "string"
+    }
+  },
+  "externalDocs": {
+    "description": "PostgREST Documentation",
+    "url": "https://postgrest.org/en/v14/references/api.html"
+  }
+}

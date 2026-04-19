@@ -1,0 +1,23 @@
+{
+  "name": "optistock",
+  "version": "1.0.0",
+  "description": "OptiStock - Agente de Inventario Inteligente",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:agent": "node scripts/test-agent-scenarios.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1",
+    "dotenv": "^17.4.0",
+    "duck-duck-scrape": "^2.2.7",
+    "express": "^4.21.0",
+    "nodemailer": "^8.0.5"
+  }
+}

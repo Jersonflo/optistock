@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="OptiStock - Agente de Inventario Inteligente. Consulta stock, préstamos, mantenimiento y estadísticas de tu inventario.">
+  <title>OptiStock Agent | Inventario Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header-logo" aria-label="OptiStock Logo"></div>
+      <div class="header-info">
+        <h1 class="header-title">OptiBot</h1>
+        <div class="header-status">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">En línea</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon" id="btnClear" title="Nueva conversación" aria-label="Limpiar chat">🗑️</button>
+      </div>
+    </header>
+
+    <!-- Chat Area -->
+    <main class="chat-area" id="chatArea">
+      <!-- Welcome Card -->
+      <div class="welcome-card" id="welcomeCard">
+        <span class="welcome-icon" aria-hidden="true"></span>
+        <h2 class="welcome-title">¡Hola! Soy OptiBot</h2>
+        <p class="welcome-subtitle">
+          Tu asistente inteligente de inventario. Puedo consultar stock, préstamos, planes de mantenimiento y
+          estadísticas en tiempo real.
+        </p>
+        <div class="suggestions" id="suggestions">
+          <button class="chip" data-query="¿Cuántos cautines hay en stock?">
+            <span class="chip-icon">📦</span>Stock de cautines
+          </button>
+          <button class="chip" data-query="¿Quién tiene prestado el Arduino?">
+            <span class="chip-icon">👤</span>Préstamos Arduino
+          </button>
+          <button class="chip" data-query="¿Qué equipos tienen plan de mantenimiento?">
+            <span class="chip-icon">🔧</span>Mantenimiento
+          </button>
+          <button class="chip" data-query="Dame las estadísticas generales del inventario">
+            <span class="chip-icon">📊</span>Estadísticas
+          </button>
+          <button class="chip" data-query="¿Cuántas impresoras 3D hay disponibles?">
+            <span class="chip-icon">🖨️</span>Impresoras 3D
+          </button>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="message-avatar bot"></div>
+        <div class="typing-bubble">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Input Area -->
+    <footer class="input-area">
+      <div class="input-wrapper">
+        <div class="input-field-wrapper">
+          <textarea id="chatInput" placeholder="Pregúntame sobre el inventario..." rows="1"
+            aria-label="Escribe tu mensaje"></textarea>
+        </div>
+        <button class="btn-send" id="btnSend" title="Enviar" aria-label="Enviar mensaje">
+          ➤
+        </button>
+      </div>
+      <p class="input-hint">OptiBot consulta datos en tiempo real desde Supabase </p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
